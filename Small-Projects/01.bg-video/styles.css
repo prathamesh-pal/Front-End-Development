@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Content wrapper */
+.content {
+    z-index: 1;
+}
+
+/* Responsive heading */
+.content h1 {
+    font-size: clamp(3rem, 12vw, 10rem);
+    color: antiquewhite;
+    font-weight: 700;
+    transition: 0.4s ease;
+    line-height: 1;
+}
+
+/* Hover effect (desktop-friendly) */
+.content h1:hover {
+    -webkit-text-stroke: 0.3rem rgb(0, 255, 255);
+    color: transparent;
+}
+
+/* Button */
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: wheat;
+    font-size: clamp(1rem, 3vw, 2rem);
+    border: 2px solid white;
+    border-radius: 999px;
+    padding: clamp(10px, 2vw, 14px) clamp(24px, 5vw, 50px);
+    margin-top: 1.5rem;
+    transition: 0.4s ease;
+}
+
+.content a:hover {
+    color: #000;
+    background-color: rgb(0, 252, 255);
+}
+
+/* Background video */
+.back-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+@media (max-width: 600px) {
+    .content h1:hover {
+        -webkit-text-stroke: 0.15rem red;
+    }
+
+    .hero {
+        padding: 0 1rem;
+    }
+}

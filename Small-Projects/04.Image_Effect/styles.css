@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+/* common layer */
+.clip{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: clip-path 0.8s ease; */
+}
+
+/* default clipped states */
+.clip1{
+    background-image: url(https://images.pexels.com/photos/8341224/pexels-photo-8341224.jpeg);
+    clip-path: polygon(0 0, 50% 0, 35% 100%, 0 100%);
+}
+
+.clip2{
+    background-image: url(https://images.pexels.com/photos/11760859/pexels-photo-11760859.jpeg);
+    clip-path: polygon(25% 0, 75% 0, 75% 100%, 35% 100%);
+}
+
+.clip3{
+    background-image: url(https://images.pexels.com/photos/10135538/pexels-photo-10135538.jpeg);
+    clip-path: polygon(75% 0, 100% 0, 100% 100%, 65% 100%);
+}
+
+/* hide all on container hover */
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+/* expand hovered image */
+.container .clip:hover{
+    clip-path: polygon(0  0, 100% 0, 100% 100%, 0 100%);
+}

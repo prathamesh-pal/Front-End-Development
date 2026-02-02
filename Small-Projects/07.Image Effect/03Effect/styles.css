@@ -1,0 +1,104 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(120deg, rgb(252, 250, 250), rgb(0, 0, 0));
+}
+
+.card {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    background-color: black;
+    border: 15px groove rgb(76, 192, 221);
+    border-radius: 20px
+
+}
+
+.card .img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+
+.content {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 5%;
+    background-color: rgb(255, 17, 17);
+    transition: all 1s;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 2px;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+p {
+    width: 80%;
+    margin: 10px auto;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+a {
+    background-color: violet;
+    height: 20PX;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.card:hover .content {
+    height: 40%;
+    opacity: 1;
+}
+
+.content:hover h3 {
+    opacity: 1;
+}
+
+.content:hover p {
+    opacity: 1;
+}
+
+.content:hover a {
+    opacity: 1;
+}
+
+
+
+.card:hover:hover .img-container img {
+    transform: translateY(-40%);
+}

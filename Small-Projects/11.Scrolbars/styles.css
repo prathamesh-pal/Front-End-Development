@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+.container{
+    background-color: rgb(7,7,7);
+    padding: 30px;
+    width: 25rem;
+
+}
+
+.scroll-div{
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-object{
+    padding: 20px;
+    
+}
